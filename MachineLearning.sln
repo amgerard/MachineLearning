@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MachineLearning.LinearAlgebra", "MachineLearning.LinearAlgebra\MachineLearning.LinearAlgebra.csproj", "{680E281A-BFE0-4926-8DD6-1F6A03D84B4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MachineLearning.WinformsTest", "MachineLearning.WinformsTest\MachineLearning.WinformsTest.csproj", "{E08B487A-ADE4-41BB-AADB-BF4D25455350}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MachineLearning.UnitTests", "MachineLearning.UnitTests\MachineLearning.UnitTests.csproj", "{6BBDF1E0-46B1-4883-A22C-E1BB339812EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MachineLearning.Probability", "MachineLearning.Probability\MachineLearning.Probability.csproj", "{F8F4EC95-01BC-44FB-AA1A-B809DD2D309B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{680E281A-BFE0-4926-8DD6-1F6A03D84B4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{680E281A-BFE0-4926-8DD6-1F6A03D84B4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{680E281A-BFE0-4926-8DD6-1F6A03D84B4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{680E281A-BFE0-4926-8DD6-1F6A03D84B4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E08B487A-ADE4-41BB-AADB-BF4D25455350}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E08B487A-ADE4-41BB-AADB-BF4D25455350}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E08B487A-ADE4-41BB-AADB-BF4D25455350}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E08B487A-ADE4-41BB-AADB-BF4D25455350}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BBDF1E0-46B1-4883-A22C-E1BB339812EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BBDF1E0-46B1-4883-A22C-E1BB339812EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BBDF1E0-46B1-4883-A22C-E1BB339812EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BBDF1E0-46B1-4883-A22C-E1BB339812EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8F4EC95-01BC-44FB-AA1A-B809DD2D309B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8F4EC95-01BC-44FB-AA1A-B809DD2D309B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8F4EC95-01BC-44FB-AA1A-B809DD2D309B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8F4EC95-01BC-44FB-AA1A-B809DD2D309B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
