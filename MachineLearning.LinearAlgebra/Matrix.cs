@@ -104,6 +104,11 @@ namespace MachineLearning.LinearAlgebra
             return MatrixExtensions.DoOperation(a, i => (dynamic)i * x);
         }
 
+        public static Matrix<T> operator *(T x, Matrix<T> a)
+        {
+            return MatrixExtensions.DoOperation(a, i => (dynamic)i * x);
+        }
+
         public static Matrix<T> operator /(Matrix<T> a, T x)
         {
             return MatrixExtensions.DoOperation(a, i => (dynamic)i / x);
