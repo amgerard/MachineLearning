@@ -44,5 +44,14 @@ namespace MachineLearning.LinearAlgebra
                     aOpX[i, j] = op(a[i, j]);
             return aOpX;
         }
+
+        public static Matrix<T> DoOperation<T>(Matrix<T> a, Matrix<T> b, Func<T, T> op, bool inPlace = false, int iStart = 0, int jStart = 0)
+        {
+            var aOpX = inPlace ? a : new Matrix<T>(a.Shape);
+            for (int i = 0; i < b.Shape.N; i++)
+                for (int j = 0; j < b.Shape.D; j++)
+                    aOpX[i + iStart, j + jStart] = op(b[i, j]);
+            return aOpX;
+        }
     }
 }

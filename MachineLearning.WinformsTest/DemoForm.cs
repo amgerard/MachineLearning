@@ -13,33 +13,6 @@ namespace MachineLearning.WinformsTest
         {
             InitializeComponent();
 
-            var a = new Matrix<double>(5, 5, 1.1);
-            var b = new Matrix<double>(5, 5, 3.4);
-            var c = a + b;
-            Console.Write(c.ToString());
-
-            var d = c - a;
-            Console.Write(d.ToString());
-
-            d = d - 10;
-            Console.Write(d.ToString());
-
-            var e = new Matrix<double>(2, 1, 2);
-            var f = new Matrix<double>(1, 2, 3);
-            Console.Write((e*f).ToString());
-
-            e = new Matrix<double>(1, 2, 2);
-            f = new Matrix<double>(2, 1, 3);
-            Console.Write((e * f).ToString());
-
-            var g = new Matrix<double>(2, 1, 1.1);
-            Console.Write(g.ToString());
-            Console.Write(g.Transpose.ToString());
-
-            // test equals
-            Console.Write("Should be true: " + (a + b == b + a));
-            Console.Write("Should be false: " + (a + b != b + a));
-
             GaussianDistributionDemo();
         }
 
@@ -55,6 +28,14 @@ namespace MachineLearning.WinformsTest
             }
 
             return w;
+        }
+
+        private Matrix<double> NormalEqn(Matrix<double> X, Matrix<double> y)
+        {
+            // X*w = y
+            // X'*X*w = X'*y
+            // w = inv(X' * X) * X' * y
+            return MatrixInverseExtensions.Inv3x3(X.Transpose * X) * X.Transpose * y;
         }
 
         private void GaussianDistributionDemo(double sigma = 1d)
@@ -107,6 +88,11 @@ namespace MachineLearning.WinformsTest
             //S3.Points.AddXY(0, 0);
             //S3.Points.AddXY(1, 1);
 
+            var wReg = NormalEqn(X, y).Transpose;
+
+            Series S4 = graph.Series.Add("Reg");
+            S4.ChartType = SeriesChartType.Line;
+
             for (int i = -1; i < 7; i++)
             {
                 var slope = -w[0,1] / w[0,2];
@@ -114,7 +100,12 @@ namespace MachineLearning.WinformsTest
                 var xx = i;
                 var yy = slope * xx + intercept;
                 S3.Points.AddXY(i, yy);
+
+
+                S4.Points.AddXY(i, (-wReg[0, 1] / wReg[0, 2])*i + -wReg[0, 0] / wReg[0, 2]);
             }
+
+            
 
             return;
            
